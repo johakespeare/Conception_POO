@@ -3,9 +3,7 @@ import java.util.*;
 
 /**
  * Class name : De
- *
  * Description : Class for a standard dice object
- *
  * @author Jean-François Giammari
  */
 
@@ -17,6 +15,8 @@ public class De {
     static int nb_De;
     protected static Random r = new Random();
 
+
+    /** CONSTRUCTOR **/
     /**
      * Constructor for De with name & nb_Face &
      * @param init_name : Name of the dice
@@ -33,24 +33,25 @@ public class De {
      * @param init_name : Name of the dice
      */
     public De(String init_name) {
-        checkName(init_name);
-        nb_De++;
+        this(init_name,MIN_SIDE);
     }
 
-    /**
-     * Constructor  with nothing
-     */
+    /** Constructor  with nothing **/
     public De() {
-        nb_De++;
-        checkName("");
+        this("",MIN_SIDE);
     }
 
 
-    /**
-     * Getter for nbFaces
-     */
+
+    /** GETTER & SETTER **/
+    /** Getter for nbFace **/
     public int getNbFaces() {
         return nbFaces;
+    }
+
+    /** Getter for name **/
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -65,13 +66,8 @@ public class De {
         }
     }
 
-    /**
-     * Getter for name
-     */
-    public String getName() {
-        return this.name;
-    }
 
+    /** METHODS **/
     /**
      * Check if name is valid or set by default with N° Dice number
      * @param new_name : Name to check validity

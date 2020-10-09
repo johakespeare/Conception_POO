@@ -14,6 +14,7 @@ import java.util.GregorianCalendar;
 public class Manager extends Employe {
     Secretaire secretaire;
 
+    /** CONSTRUCTOR **/
     /**
      * Constructeur de Mananger
      * @param leNom le nom de la personne
@@ -27,6 +28,7 @@ public class Manager extends Employe {
         super(leNom, lePrenom, laDate, lAdresse, initSalaire, initDateEmbauche);
     }
 
+    /** METHODS **/
     /**
      * Permet d'augmenter le salaire a partir d'un poucentage avec un bonus de 0.5% par année dans l'entreprise
      * @param  pourcentage le pourcentage positif
@@ -54,9 +56,7 @@ public class Manager extends Employe {
         secretaire.addManager(this);
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
+    @Override
     public String toString(){
         String result="\n EMPLOYE MANAGER -> \nNom : "+getNom()+"\n"
                 +"Pr�nom : "+getPrenom()+"\n"+

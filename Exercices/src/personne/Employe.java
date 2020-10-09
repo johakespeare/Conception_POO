@@ -5,9 +5,7 @@ import java.util.GregorianCalendar;
 
 /**
  * Class name : Employe
- *
  * Description : Class for a Personne who work
- *
  * @author Jean-François Giammari
  */
 public class Employe extends Personne {
@@ -17,6 +15,7 @@ public class Employe extends Personne {
     public static final int MINAGEREQUIS = 16;
     public static final int MAXAGEREQUIS = 65;
 
+    /** CONSTRUCTOR **/
     /**
      * Constructeur de Mananger
      * @param leNom le nom de la personne
@@ -56,6 +55,7 @@ public class Employe extends Personne {
         }
     }
 
+    /** METHODS **/
     /**
      * Permet d'augmenter le salaire a partir d'un poucentage
      * @param  pourcentage le pourcentage positif
@@ -94,9 +94,7 @@ public class Employe extends Personne {
         return dateEmbauche;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
+    @Override
     public String toString(){
         String result="\n EMPLOYE -> \nNom : "+getNom()+"\n"
                 +"Pr�nom : "+getPrenom()+"\n"+

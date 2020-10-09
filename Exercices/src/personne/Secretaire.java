@@ -14,7 +14,7 @@ import java.util.GregorianCalendar;
 public class Secretaire extends Employe {
     ArrayList<Manager> managers = new ArrayList<Manager>();
 
-
+    /** CONSTRUCTOR **/
     /**
      * Constructeur de Mananger
      * @param leNom le nom de la personne
@@ -28,6 +28,7 @@ public class Secretaire extends Employe {
         super(leNom, lePrenom, laDate, lAdresse, initSalaire, initDateEmbauche);
     }
 
+    /** METHODS **/
     /**
      * Permet d'augmenter le salaire a partir d'un poucentage avec un bonus de 0.1% par année manager assigné
      * @param  pourcentage le pourcentage positif
@@ -54,9 +55,7 @@ public class Secretaire extends Employe {
         }else if(managers.size() >= 5){
             managerStr = "Une secretaire ne peut pas avoir plus de 5 manager";
         }
-        else {
-            managerStr = "Aucun manager";
-        }
+        else { managerStr = "Aucun manager"; }
 
         return managerStr;
     }
@@ -78,9 +77,7 @@ public class Secretaire extends Employe {
 
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
+    @Override
     public String toString(){
         String result="\n EMPLOYE SECRETERAIRE -> \nNom : "+getNom()+"\n"
                 +"Pr�nom : "+getPrenom()+"\n"+
