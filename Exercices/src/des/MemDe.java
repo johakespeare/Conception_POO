@@ -40,4 +40,9 @@ public class MemDe extends De {
 
         return side;
     }
+
+    @Override
+    public String toString() {
+        return "Type : Memoire | Nom : "+getName()+" | "+getNbFaces()+" Faces";
+    }
 }

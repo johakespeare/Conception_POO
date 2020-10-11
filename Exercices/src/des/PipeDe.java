@@ -34,4 +34,11 @@ public class PipeDe extends De {
     public int lancer(){
         return  r.nextInt((this.getNbFaces()+1)-this.pipe)+this.pipe;
     }
+
+    @Override
+    public String toString() {
+        return "Type : Pipé | Nom : "+getName()+" | "+getNbFaces()+" Faces";
+    }
+
+
 }

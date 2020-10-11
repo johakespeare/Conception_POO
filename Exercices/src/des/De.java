@@ -113,6 +113,7 @@ public class De {
 
     @Override
     public String toString() {
-        return "Nom : "+getName()+" | "+getNbFaces()+" Faces";
+        return "Type : Standard | Nom : "+getName()+" | "+getNbFaces()+" Faces";
     }
+
 }
