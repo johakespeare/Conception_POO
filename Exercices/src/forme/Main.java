@@ -7,21 +7,6 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Object> formesList = new ArrayList<Object>();
 
-        Forme Forme1 = new Forme();
-        Forme Forme2 = new Forme("Ma Forme");
-        formesList.add(Forme1);
-        formesList.add(Forme2);
-
-        Forme2D Forme2D1 = new Forme2D();
-        Forme2D Forme2D2 = new Forme2D("Ma Forme 2D");
-        formesList.add(Forme2D1);
-        formesList.add(Forme2D2);
-
-        Forme3D Forme3D1 = new Forme3D();
-        Forme3D Forme3D2 = new Forme3D("Ma Forme 3D");
-        formesList.add(Forme3D1);
-        formesList.add(Forme3D2);
-
         Ellipse Ellipse1= new Ellipse("Mon Ellipse 1",6,7);
         Ellipse Ellipse2= new Ellipse(4,5);
         formesList.add(Ellipse1);

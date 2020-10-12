@@ -6,7 +6,7 @@ import java.util.Objects;
  * Description : Class for a standard Shape
  * @author Jean-François Giammari
  */
-public class Forme {
+public abstract class Forme {
     static int nb_forme;
     static final double PI = 3.14159265359;
     public String name;

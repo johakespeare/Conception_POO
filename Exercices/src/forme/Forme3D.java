@@ -6,7 +6,7 @@ import java.util.Objects;
  * Description : Class for a standard 3D Shape
  * @author Jean-François Giammari
  */
-public class Forme3D extends Forme2D {
+public abstract class Forme3D extends Forme2D {
 
     /** CONSTRUCTOR **/
     /**
