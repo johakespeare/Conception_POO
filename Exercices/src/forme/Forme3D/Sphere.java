@@ -37,7 +37,7 @@ public class Sphere extends Cercle {
      * return the perimetre of the shape
      */
     public double volume() {
-        return (3 / 4) * Math.PI * r * r * r;
+        return (3 / 4) * Math.PI * Math.pow(r, 3);
     }
 
 

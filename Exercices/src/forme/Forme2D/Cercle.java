@@ -30,7 +30,7 @@ public class Cercle extends Forme2D {
      * return the surface of the shape
      */
     public double surface(){
-        return Math.PI*r*r;
+        return Math.PI*Math.pow(r, 2);
     }
 
     /**
