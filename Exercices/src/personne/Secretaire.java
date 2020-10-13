@@ -24,7 +24,7 @@ public class Secretaire extends Employe {
      * @param initSalaire le salaire de la personne
      * @param initDateEmbauche la date d'embauche de la personne
      */
-    protected Secretaire(String leNom, String lePrenom, GregorianCalendar laDate, Adresse lAdresse, float initSalaire, GregorianCalendar initDateEmbauche) {
+    public Secretaire(String leNom, String lePrenom, GregorianCalendar laDate, Adresse lAdresse, float initSalaire, GregorianCalendar initDateEmbauche) {
         super(leNom, lePrenom, laDate, lAdresse, initSalaire, initDateEmbauche);
     }
 

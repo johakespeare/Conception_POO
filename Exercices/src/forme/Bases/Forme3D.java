@@ -1,9 +1,11 @@
 package forme.Bases;
+
 import java.util.Objects;
 
 /**
  * Class name : Forme3D
  * Description : Class for a standard 3D Shape
+ *
  * @author Jean-François Giammari
  */
 public abstract class Forme3D extends Forme2D {
@@ -11,6 +13,7 @@ public abstract class Forme3D extends Forme2D {
     /** CONSTRUCTOR **/
     /**
      * Full content constructor
+     *
      * @param name - Name + n°
      */
     public Forme3D(String name) {
@@ -25,7 +28,7 @@ public abstract class Forme3D extends Forme2D {
     /**
      * @return the volume of a shape
      */
-    public double volume(){
+    public double volume() {
         return 0.0;
     }
 
@@ -34,7 +37,7 @@ public abstract class Forme3D extends Forme2D {
      */
     @Override
     public String toString() {
-        return super.toString() + "\n* Volume : "+ volume();
+        return super.toString() + "\n* Volume : " + volume();
     }
 
     /**
