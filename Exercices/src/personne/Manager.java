@@ -56,7 +56,7 @@ public class Manager extends Employe {
             secretaire.delManager(this);
             this.secretaire = secretaire;
             secretaire.addManager(this);
-        }
+        }else {System.err.println("Echec de l'opération");}
     }
 
     @Override
