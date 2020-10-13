@@ -36,7 +36,6 @@ public class Manager extends Employe {
     @Override
     public void augmenterLeSalaire(float pourcentage){
         pourcentage += calculAnnuite()*0.5;
-        if(pourcentage > 100){ pourcentage = 100;}
         super.augmenterLeSalaire(pourcentage);
     }
 
