@@ -24,7 +24,7 @@ public class Manager extends Employe {
      * @param initSalaire le salaire de la personne
      * @param initDateEmbauche la date d'embauche de la personne
      */
-    protected Manager(String leNom, String lePrenom, GregorianCalendar laDate, Adresse lAdresse, float initSalaire, GregorianCalendar initDateEmbauche) {
+    public Manager(String leNom, String lePrenom, GregorianCalendar laDate, Adresse lAdresse, float initSalaire, GregorianCalendar initDateEmbauche) {
         super(leNom, lePrenom, laDate, lAdresse, initSalaire, initDateEmbauche);
     }
 
