@@ -33,11 +33,8 @@ public class Secretaire extends Employe {
      * Permet d'augmenter le salaire a partir d'un poucentage avec un bonus de 0.1% par année manager assigné
      * @param  pourcentage le pourcentage positif
      */
-    public void augmenterLeSalaire(int pourcentage) {
+    public void augmenterLeSalaire(float pourcentage) {
         pourcentage += managers.size() * 0.1;
-        if (pourcentage > 100) {
-            pourcentage = 100;
-        }
         super.augmenterLeSalaire(pourcentage);
     }
 
