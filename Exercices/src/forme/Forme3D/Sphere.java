@@ -1,4 +1,7 @@
-package forme;
+package forme.Forme3D;
+
+import forme.Forme2D.Cercle;
+
 /**
  * Class name : Sphere
  * Description : Class for an Ellipses
@@ -25,14 +28,14 @@ public class Sphere extends Cercle {
      * return the surface of the shape
      */
     public double surface(){
-        return 0.0;
+        return super.surface()*4;
     }
 
     /**
      * return the perimetre of the shape
      */
     public double volume(){
-        return 0.0;
+        return (3/4)*Math.PI*r*r*r;
     }
 
 

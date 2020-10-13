@@ -1,4 +1,4 @@
-package forme;
+package forme.Bases;
 import java.util.Objects;
 
 /**
@@ -8,7 +8,6 @@ import java.util.Objects;
  */
 public abstract class Forme {
     static int nb_forme;
-    static final double PI = 3.14159265359;
     public String name;
 
 

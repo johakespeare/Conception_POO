@@ -1,25 +1,31 @@
-package forme;
+package forme.Forme2D;
+import forme.Bases.Forme2D;
+
 /**
- * Class name : Rectangle
+ * Class name : Ellipse
  * Description : Class for an Ellipses
  * @author Jean-François Giammari
  */
-public class Rectangle extends Forme2D {
-    protected double h = 0;
-    protected double l = 0;
+public class Ellipse extends Forme2D {
+
+    protected double ra = 0;
+    protected double rb = 0;
 
     /** CONSTRUCTOR **/
     /**
      * Full content constructor
-     * @param h - Hauter
-     * @param l - Largeur
+     * @param ra = Axe a
+     * @param rb = Axe b
      * @param name - Name + n°
      */
-    public Rectangle(String name, double h , double l) {
+    public Ellipse(String name, double ra, double rb) {
         super(name);
+        this.ra = ra;
+        this.rb = rb;
     }
-    public Rectangle(double h , double l){
-        this("",h,l);
+
+    public Ellipse(double ra, double rb) {
+        this("",ra,rb);
     }
 
     /** METHODS **/
@@ -27,14 +33,14 @@ public class Rectangle extends Forme2D {
      * return the surface of the shape
      */
     public double surface(){
-        return 0.0;
+        return Math.PI*ra*rb;
     }
 
     /**
      * return the perimetre of the shape
      */
     public double perimetre(){
-        return 0.0;
+        return(2*Math.PI*(Math.sqrt((ra*rb)/2)));
     }
 
     /**
@@ -42,7 +48,7 @@ public class Rectangle extends Forme2D {
      */
     @Override
     public String toString() {
-        return super.toString() + "\n* Hauteur : "+ h +"\n* Largeur : "+ l;
+        return super.toString() + "\n* Axe a : "+ ra+"\n* Axe b : "+ rb;
     }
 
 

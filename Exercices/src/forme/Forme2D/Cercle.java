@@ -1,4 +1,7 @@
-package forme;
+package forme.Forme2D;
+
+import forme.Bases.Forme2D;
+
 /**
  * Class name : Cercle
  * Description : Class for an Ellipses
@@ -26,14 +29,14 @@ public class Cercle extends Forme2D {
      * return the surface of the shape
      */
     public double surface(){
-        return 0.0;
+        return Math.PI*r*r;
     }
 
     /**
      * return the perimetre of the shape
      */
     public double perimetre(){
-        return 0.0;
+        return 2*Math.PI*r;
     }
 
     /**

@@ -1,10 +1,13 @@
-package forme;
+package forme.Forme3D;
+
+import forme.Forme2D.Cercle;
+
 /**
  * Class name : Sphere
  * Description : Class for an Ellipses
  * @author Jean-François Giammari
  */
-public class Cylindre extends Cercle  {
+public class Cylindre extends Cercle {
     protected double h = 0;
 
     /** CONSTRUCTOR **/
@@ -27,14 +30,14 @@ public class Cylindre extends Cercle  {
      * return the surface of the shape
      */
     public double surface(){
-        return 0.0;
+        return perimetre()*h + super.surface();
     }
 
     /**
      * return the volume of the shape
      */
     public double volume(){
-        return 0.0;
+        return super.surface()*h;
     }
 
     /**

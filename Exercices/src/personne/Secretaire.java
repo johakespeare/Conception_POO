@@ -79,17 +79,6 @@ public class Secretaire extends Employe {
 
     @Override
     public String toString(){
-        String result="\n EMPLOYE SECRETERAIRE -> \nNom : "+getNom()+"\n"
-                +"Pr�nom : "+getPrenom()+"\n"+
-                "N�(e) le : "+getDateNaissance().get(Calendar.DAY_OF_MONTH)+
-                "-"+getDateNaissance().get(Calendar.MONTH)+
-                "-"+getDateNaissance().get(Calendar.YEAR)+"\n"+
-                "Adresse : "+ getAdresse().toString()+"\n"+
-                "Date Embauche : "+getDateEmbauche().get(Calendar.DAY_OF_MONTH)+
-                "-"+getDateEmbauche().get(Calendar.MONTH)+
-                "-"+getDateEmbauche().get(Calendar.YEAR)+"\n"+
-                "Manager : "+ getManagers()+"\n"+
-                "Salaire : "+ getSalaire();
-        return result;
+        return  super.toString()+"Manager : "+ getManagers()+"\n";
     }
 }

@@ -1,4 +1,10 @@
 package forme;
+import forme.Forme2D.Cercle;
+import forme.Forme2D.Ellipse;
+import forme.Forme2D.Rectangle;
+import forme.Forme3D.Cylindre;
+import forme.Forme3D.Sphere;
+
 import java.util.ArrayList;
 
 import static java.lang.System.out;
