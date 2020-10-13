@@ -46,11 +46,5 @@ public class Main {
         formesList.clear();
 
 
-
-        JCanvas jc = new JCanvas();
-        jc.setBackground(Color.WHITE);
-        jc.setPreferredSize(new Dimension(400,200));
-        GUIHelper.showOnFrame(jc,"test");
-
     }
 }
