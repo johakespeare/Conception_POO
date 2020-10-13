@@ -52,9 +52,11 @@ public class Manager extends Employe {
      * @param secretaire assigne une secretaire
      */
     public void setSecretaire(Secretaire secretaire) {
-        secretaire.delManager(this);
-        this.secretaire = secretaire;
-        secretaire.addManager(this);
+        if(secretaire instanceof Secretaire && !this.secretaire.equals(secretaire)){
+            secretaire.delManager(this);
+            this.secretaire = secretaire;
+            secretaire.addManager(this);
+        }
     }
 
     @Override
