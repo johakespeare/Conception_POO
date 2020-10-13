@@ -33,7 +33,8 @@ public class Manager extends Employe {
      * Permet d'augmenter le salaire a partir d'un poucentage avec un bonus de 0.5% par année dans l'entreprise
      * @param  pourcentage le pourcentage positif
      */
-    public void augmenterLeSalaire(int pourcentage){
+    @Override
+    public void augmenterLeSalaire(float pourcentage){
         pourcentage += calculAnnuite()*0.5;
         if(pourcentage > 100){ pourcentage = 100;}
         super.augmenterLeSalaire(pourcentage);

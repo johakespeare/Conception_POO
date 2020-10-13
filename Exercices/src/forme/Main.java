@@ -43,8 +43,14 @@ public class Main {
             out.println(formesList.get(i+1));
             out.println(formesList.get(i).equals(formesList.get(i+1))); // false
         }
-
         formesList.clear();
+
+
+
+        JCanvas jc = new JCanvas();
+        jc.setBackground(Color.WHITE);
+        jc.setPreferredSize(new Dimension(400,200));
+        GUIHelper.showOnFrame(jc,"test");
 
     }
 }
