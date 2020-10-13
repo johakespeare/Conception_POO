@@ -66,7 +66,9 @@ public class Personne{
 		if (this == o) return true;
 		if (!(o instanceof Personne)) return false;
 		Personne personne = (Personne) o;
-		return nom.equals(personne.nom) && prenom.equals(personne.prenom) && dateNaissance.equals(personne.dateNaissance);
+		return  nom.equals(personne.nom) &&
+				prenom.equals(personne.prenom) &&
+				dateNaissance.equals(personne.dateNaissance);
 	}
 
 	/**
