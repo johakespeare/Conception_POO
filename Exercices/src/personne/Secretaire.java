@@ -12,7 +12,7 @@ import java.util.GregorianCalendar;
  * @author Jean-François Giammari
  */
 public class Secretaire extends Employe {
-    ArrayList<Manager> managers = new ArrayList<Manager>();
+    ArrayList<Manager> managers = new ArrayList<>();
 
     /** CONSTRUCTOR **/
     /**
@@ -49,8 +49,8 @@ public class Secretaire extends Employe {
         String managerStr = "";
 
         if (managers.size() > 0) {
-            for (int i = 0; i < managers.size(); i++) {
-                managerStr += " " + managers.get(i).getNom() + " " + managers.get(i).getPrenom() + " | ";
+            for (Manager manager : managers) {
+                managerStr += " " + manager.getNom() + " " + manager.getPrenom() + " | ";
             }
         }else if(managers.size() >= 5){
             managerStr = "Une secretaire ne peut pas avoir plus de 5 manager";
@@ -65,7 +65,12 @@ public class Secretaire extends Employe {
      * @param manager ajoute un manager a la liste des manangers de la secretaire
      */
     public void addManager(Manager manager) {
-        managers.add(manager);
+        if(managers.size() < 5){
+            managers.add(manager);
+        }else{
+            System.err.println("Trops de manager");
+        }
+
     }
 
     /**
@@ -74,7 +79,6 @@ public class Secretaire extends Employe {
      */
     public void delManager(Manager manager) {
         managers.remove(manager);
-
     }
 
     @Override

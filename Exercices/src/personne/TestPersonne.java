@@ -29,6 +29,9 @@ public class TestPersonne {
       S.augmenterLeSalaire(50);
       System.out.println(S.getSalaire());
 
+      Personne personne = null;
+
+
 
     }
 }
