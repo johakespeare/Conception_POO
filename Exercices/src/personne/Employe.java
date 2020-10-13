@@ -48,9 +48,10 @@ public class Employe extends Personne {
         GregorianCalendar maxAgeDate = (GregorianCalendar) initDateEmbauche.clone();
         minAgeDate.set(Calendar.YEAR, year - MINAGEREQUIS );
         maxAgeDate.set(Calendar.YEAR, year - MAXAGEREQUIS);
-        if(laDate.before(minAgeDate) && laDate.after(maxAgeDate) && initSalaire!=0){
+        if(laDate.before(minAgeDate) && laDate.after(maxAgeDate) && initSalaire > 0){
             return new Employe(leNom,lePrenom,laDate,lAdresse, initSalaire,initDateEmbauche);
         }else{
+            System.err.println("Erreur d'instance");
            return null;
         }
     }
@@ -61,10 +62,10 @@ public class Employe extends Personne {
      * @param  pourcentage le pourcentage positif
      */
     public void augmenterLeSalaire(int pourcentage){
-        if(pourcentage > 0 && pourcentage <= 100){
+        if(pourcentage > 0){
             this.salaire = this.salaire*((float)pourcentage/100 + 1);
         }else{
-            System.err.println("Il faut un poucentage positif ! ");
+            System.err.println("Il faut un pourcentage positif ! ");
         }
     }
 
