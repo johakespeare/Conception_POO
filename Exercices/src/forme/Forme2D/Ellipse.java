@@ -1,9 +1,11 @@
 package forme.Forme2D;
+
 import forme.Bases.Forme2D;
 
 /**
  * Class name : Ellipse
  * Description : Class for an Ellipses
+ *
  * @author Jean-François Giammari
  */
 public class Ellipse extends Forme2D {
@@ -14,33 +16,36 @@ public class Ellipse extends Forme2D {
     /** CONSTRUCTOR **/
     /**
      * Full content constructor
-     * @param ra = Axe a
-     * @param rb = Axe b
+     *
+     * @param ra   = Axe a
+     * @param rb   = Axe b
      * @param name - Name + n°
      */
     public Ellipse(String name, double ra, double rb) {
         super(name);
+        if (ra < 0) ra = 0;
+        if (rb < 0) rb = 0;
         this.ra = ra;
         this.rb = rb;
     }
 
     public Ellipse(double ra, double rb) {
-        this("",ra,rb);
+        this("", ra, rb);
     }
 
     /** METHODS **/
     /**
      * return the surface of the shape
      */
-    public double surface(){
-        return Math.PI*ra*rb;
+    public double surface() {
+        return Math.PI * ra * rb;
     }
 
     /**
      * return the perimetre of the shape
      */
-    public double perimetre(){
-        return(2*Math.PI*(Math.sqrt((ra*rb)/2)));
+    public double perimetre() {
+        return (2 * Math.PI * (Math.sqrt((ra * rb) / 2)));
     }
 
     /**
@@ -48,7 +53,7 @@ public class Ellipse extends Forme2D {
      */
     @Override
     public String toString() {
-        return super.toString() + "\n* Axe a : "+ ra+"\n* Axe b : "+ rb;
+        return super.toString() + "\n* Axe a : " + ra + "\n* Axe b : " + rb;
     }
 
 

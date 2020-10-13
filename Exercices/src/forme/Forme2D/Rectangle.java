@@ -5,6 +5,7 @@ import forme.Bases.Forme2D;
 /**
  * Class name : Rectangle
  * Description : Class for an Ellipses
+ *
  * @author Jean-François Giammari
  */
 public class Rectangle extends Forme2D {
@@ -14,30 +15,37 @@ public class Rectangle extends Forme2D {
     /** CONSTRUCTOR **/
     /**
      * Full content constructor
-     * @param h - Hauter
-     * @param l - Largeur
+     *
+     * @param h    - Hauter
+     * @param l    - Largeur
      * @param name - Name + n°
      */
-    public Rectangle(String name, double h , double l) {
+    public Rectangle(String name, double h, double l) {
         super(name);
+        if (l < 0) l = 0;
+        if (h < 0) h = 0;
+        this.l = l;
+        this.h = h;
+
     }
-    public Rectangle(double h , double l){
-        this("",h,l);
+
+    public Rectangle(double h, double l) {
+        this("", h, l);
     }
 
     /** METHODS **/
     /**
      * return the surface of the shape
      */
-    public double surface(){
-        return l*h;
+    public double surface() {
+        return l * h;
     }
 
     /**
      * return the perimetre of the shape
      */
-    public double perimetre(){
-        return 2*(l+h);
+    public double perimetre() {
+        return 2 * (l + h);
     }
 
     /**
@@ -45,7 +53,7 @@ public class Rectangle extends Forme2D {
      */
     @Override
     public String toString() {
-        return super.toString() + "\n* Hauteur : "+ h +"\n* Largeur : "+ l;
+        return super.toString() + "\n* Hauteur : " + h + "\n* Largeur : " + l;
     }
 
 

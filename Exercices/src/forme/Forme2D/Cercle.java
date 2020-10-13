@@ -18,6 +18,7 @@ public class Cercle extends Forme2D {
      */
     public Cercle(String name, double r) {
         super(name);
+        if (r < 0) r = 0;
         this.r = r;
     }
 
