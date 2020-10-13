@@ -61,9 +61,9 @@ public class Employe extends Personne {
      * Permet d'augmenter le salaire a partir d'un poucentage
      * @param  pourcentage le pourcentage positif
      */
-    public void augmenterLeSalaire(int pourcentage){
+    public void augmenterLeSalaire(float pourcentage){
         if(pourcentage > 0){
-            this.salaire = this.salaire*((float)pourcentage/100 + 1);
+            this.salaire = this.salaire*(pourcentage/100 + 1);
         }else{
             System.err.println("Il faut un pourcentage positif ! ");
         }
